@@ -4,15 +4,22 @@
   "description": "Tutorial for react",
   "main": "App.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "serve": "parcel index.html"
   },
   "repository": {
     "type": "git",
-    "url": "namaste-react-tutorial"
+    "url": "https://github.com/Shashankshekhar22/namaste-react-tutorial.git"
   },
-  "keywords": [
-    "namastereact"
-  ],
+  "keywords": [],
   "author": "Shashank Shekhar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
