@@ -1,34 +1,27 @@
 import React from "react";
-import ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-    style: {
-      background:"red",
-    },
-    className:"title"
-  },
-  "heading"
-);
-const heading1 = React.createElement(
-  "h1",
-  {
-    id: "title",
-  },
-  "heading1"
-);
+// JSX => Babel transpiles it to React.createElement => ReactElement-JS Object => HTMLElement(Render)
+// React Element
+const jsxHeading = <h1 id="heading">This is my React Element 🚀 </h1>;
 
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading, heading1]
-);
-
+const Title = () => {
+  return <h1 className="titleComponent">This is the Title Component</h1>;
+};
+// React Component
+// Component composition: Clubbing of 2 or more componnet together
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+      {jsxHeading}
+      <h3>Called as a function: </h3> {Title()}
+      <Title />
+      <h1 className="heading">This is a react Functional Component</h1>
+    </div>
+  );
+};
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // passing react element inside root
-root.render(container);
+// root.render(jsxHeading);
+root.render(<HeadingComponent />);

@@ -21,3 +21,8 @@
 - Error Handling and Stack trace
 - Option to host it on https
 - Tree Shaking algo - Remove unused code
+
+# Components in React
+
+- Class based component (Old way of writting the component)
+- functional based component
